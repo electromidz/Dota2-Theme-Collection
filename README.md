@@ -74,11 +74,40 @@ vim.cmd.colorscheme("dota-lich")
 
 ### Zed
 
+**Option 1: Install as Zed Extension (recommended)**
+
+```bash
+# Build the extension
+node --import tsx packages/cli/src/index.ts build-zed-extension
+```
+
+Then in Zed:
+1. Open **Extensions** panel (click the Extensions icon in the status bar)
+2. Click **Install Dev Extension**
+3. Select the `packages/zed-extension` directory
+
+**Option 2: Manual install**
+
 Copy the theme JSON to your Zed themes directory:
 
 ```bash
 cp themes/zed/lich.json ~/.config/zed/themes/
 ```
+
+**Publishing to Zed Extension Registry**
+
+1. Fork https://github.com/zed-industries/extensions
+2. Add your repo as a submodule:
+   ```bash
+   git submodule add <your-fork-url> extensions/dota-themes
+   ```
+3. Add to `extensions.toml`:
+   ```toml
+   [dota-themes]
+   submodule = "extensions/dota-themes"
+   version = "0.1.0"
+   ```
+4. Submit a PR
 
 ### Kitty
 

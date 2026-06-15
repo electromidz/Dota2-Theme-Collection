@@ -1,7 +1,7 @@
 {
-  "name": "dota-lich",
-  "displayName": "Dota Lich",
-  "description": "The Frost Mage — ancient frost sorcerer, lord of the frozen wastes — A Dota 2 hero-inspired theme for VS Code",
+  "name": "dota-brewmaster",
+  "displayName": "Dota Brewmaster",
+  "description": "The Grandmaster — celestial pandaren warrior who commands the three elemental brews — A Dota 2 hero-inspired theme for VS Code",
   "version": "0.1.0",
   "publisher": "dota-themes",
   "license": "MIT",
@@ -13,9 +13,9 @@
   ],
   "themes": [
     {
-      "label": "Dota Lich",
+      "label": "Dota Brewmaster",
       "uiTheme": "vs-dark",
-      "path": "./themes/dota-lich-color-theme.json"
+      "path": "./themes/dota-brewmaster-color-theme.json"
     }
   ]
 }

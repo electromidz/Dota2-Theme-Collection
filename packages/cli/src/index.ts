@@ -9,7 +9,7 @@ import { neovimGenerator } from "@dota-themes/generator-neovim";
 import { vscodeGenerator } from "@dota-themes/generator-vscode";
 import { weztermGenerator } from "@dota-themes/generator-wezterm";
 import { zedGenerator } from "@dota-themes/generator-zed";
-import { getHero, getHeroNames, heroMap } from "@dota-themes/palettes";
+import { getHero, getHeroNames, heroMap, heroes } from "@dota-themes/palettes";
 
 const ROOT_DIR = path.resolve(import.meta.dirname, "../../..");
 
@@ -90,6 +90,50 @@ function generateAll(heroName?: string): void {
   }
 }
 
+function buildZedExtension(): void {
+  const extensionDir = path.join(ROOT_DIR, "packages/zed-extension");
+  const themesDir = path.join(extensionDir, "themes");
+
+  console.log("Building Zed extension...\n");
+
+  // Clean themes directory
+  fs.mkdirSync(themesDir, { recursive: true });
+  for (const file of fs.readdirSync(themesDir)) {
+    fs.unlinkSync(path.join(themesDir, file));
+  }
+
+  // Generate each hero theme
+  let totalFiles = 0;
+  for (const palette of heroes) {
+    const files = zedGenerator.generate({
+      hero: palette,
+      outputDir: themesDir,
+    });
+
+    for (const file of files) {
+      fs.mkdirSync(path.dirname(file.path), { recursive: true });
+      fs.writeFileSync(file.path, file.content, "utf-8");
+      totalFiles++;
+    }
+
+    console.log(`  ✓ ${palette.metadata.title}`);
+  }
+
+  console.log(`\nDone! ${totalFiles} theme files written to ${themesDir}`);
+  console.log("\nTo install as a dev extension:");
+  console.log("  1. Open Zed → Extensions → Install Dev Extension");
+  console.log(`  2. Select: ${extensionDir}`);
+  console.log("\nTo publish:");
+  console.log("  1. Fork https://github.com/zed-industries/extensions");
+  console.log("  2. Add as submodule:");
+  console.log(`     git submodule add <your-fork-url> extensions/dota-themes`);
+  console.log("  3. Add to extensions.toml:");
+  console.log("     [dota-themes]");
+  console.log('     submodule = "extensions/dota-themes"');
+  console.log('     version = "0.1.0"');
+  console.log("  4. Submit PR");
+}
+
 function printUsage(): void {
   console.log(`
 Dota Themes — A cross-platform theme ecosystem inspired by Dota 2 heroes
@@ -98,6 +142,7 @@ Usage:
   dota-themes generate hero <hero>               Generate all platforms for a hero
   dota-themes generate platform <platform> <hero>  Generate a specific platform for a hero
   dota-themes generate all [hero]                 Generate all heroes (or one specific hero)
+  dota-themes build-zed-extension                 Build the Zed extension for publishing
   dota-themes list heroes                         List available heroes
   dota-themes list platforms                      List available platforms
 
@@ -159,6 +204,10 @@ function main(): void {
           console.error(`Unknown subcommand: "${subcommand}". Use --help for usage.`);
           process.exit(1);
       }
+      break;
+    }
+    case "build-zed-extension": {
+      buildZedExtension();
       break;
     }
     case "list": {
