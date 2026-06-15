@@ -1,0 +1,21 @@
+{
+  "name": "dota-lich",
+  "displayName": "Dota Lich",
+  "description": "The Frost Mage — ancient frost sorcerer, lord of the frozen wastes — A Dota 2 hero-inspired theme for VS Code",
+  "version": "0.1.0",
+  "publisher": "dota-themes",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "themes": [
+    {
+      "label": "Dota Lich",
+      "uiTheme": "vs-dark",
+      "path": "./themes/dota-lich-color-theme.json"
+    }
+  ]
+}

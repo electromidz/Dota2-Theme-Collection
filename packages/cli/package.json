@@ -1,0 +1,27 @@
+{
+  "name": "@dota-themes/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "dota-themes": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dota-themes/generator-core": "workspace:*",
+    "@dota-themes/generator-ghostty": "workspace:*",
+    "@dota-themes/generator-kitty": "workspace:*",
+    "@dota-themes/generator-neovim": "workspace:*",
+    "@dota-themes/generator-vscode": "workspace:*",
+    "@dota-themes/generator-wezterm": "workspace:*",
+    "@dota-themes/generator-zed": "workspace:*",
+    "@dota-themes/palettes": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.21",
+    "typescript": "^5.7.0"
+  }
+}

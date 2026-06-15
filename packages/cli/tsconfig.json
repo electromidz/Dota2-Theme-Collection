@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../palettes" },
+    { "path": "../generator-core" },
+    { "path": "../generator-neovim" },
+    { "path": "../generator-zed" },
+    { "path": "../generator-vscode" },
+    { "path": "../generator-kitty" },
+    { "path": "../generator-ghostty" },
+    { "path": "../generator-wezterm" }
+  ]
+}

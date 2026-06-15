@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "lib": ["ES2022"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": false
+  },
+  "references": [
+    { "path": "./packages/palettes" },
+    { "path": "./packages/generator-core" },
+    { "path": "./packages/generator-neovim" },
+    { "path": "./packages/generator-zed" },
+    { "path": "./packages/generator-vscode" },
+    { "path": "./packages/generator-kitty" },
+    { "path": "./packages/generator-ghostty" },
+    { "path": "./packages/generator-wezterm" },
+    { "path": "./packages/cli" }
+  ]
+}

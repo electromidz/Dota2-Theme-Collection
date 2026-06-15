@@ -1,0 +1,28 @@
+{
+  "name": "dota-themes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A cross-platform theme ecosystem inspired by Dota 2 heroes",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "generate": "node --import tsx packages/cli/src/index.ts",
+    "build": "pnpm -r run build",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc -b",
+    "generate:all": "pnpm generate generate all",
+    "clean": "rm -rf themes/*/dist"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
