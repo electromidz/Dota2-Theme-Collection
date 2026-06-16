@@ -90,6 +90,41 @@ function generateAll(heroName?: string): void {
   }
 }
 
+function buildNeovimPlugin(): void {
+  const pluginDir = path.join(ROOT_DIR, "packages/neovim-plugin");
+  const colorsDir = path.join(pluginDir, "colors");
+
+  console.log("Building Neovim plugin...\n");
+
+  // Clean colors directory
+  fs.mkdirSync(colorsDir, { recursive: true });
+  for (const file of fs.readdirSync(colorsDir)) {
+    fs.unlinkSync(path.join(colorsDir, file));
+  }
+
+  // Generate each hero colorscheme
+  let totalFiles = 0;
+  for (const palette of heroes) {
+    const files = neovimGenerator.generate({
+      hero: palette,
+      outputDir: colorsDir,
+    });
+
+    for (const file of files) {
+      fs.mkdirSync(path.dirname(file.path), { recursive: true });
+      fs.writeFileSync(file.path, file.content, "utf-8");
+      totalFiles++;
+    }
+
+    console.log(`  ✓ ${palette.metadata.title} → colors/dota-${palette.hero}.lua`);
+  }
+
+  console.log(`\nDone! ${totalFiles} colorscheme files written to ${colorsDir}`);
+  console.log("\nTo install via lazy.nvim:");
+  console.log('  { "user/dota-themes", name = "dota-necrophos", lazy = false, priority = 1000 }');
+  console.log('\nThen: vim.cmd.colorscheme("dota-necrophos")');
+}
+
 function buildZedExtension(): void {
   const extensionDir = path.join(ROOT_DIR, "packages/zed-extension");
   const themesDir = path.join(extensionDir, "themes");
@@ -142,6 +177,7 @@ Usage:
   dota-themes generate hero <hero>               Generate all platforms for a hero
   dota-themes generate platform <platform> <hero>  Generate a specific platform for a hero
   dota-themes generate all [hero]                 Generate all heroes (or one specific hero)
+  dota-themes build-neovim-plugin                 Build Neovim plugin for lazy.nvim
   dota-themes build-zed-extension                 Build the Zed extension for publishing
   dota-themes list heroes                         List available heroes
   dota-themes list platforms                      List available platforms
@@ -204,6 +240,10 @@ function main(): void {
           console.error(`Unknown subcommand: "${subcommand}". Use --help for usage.`);
           process.exit(1);
       }
+      break;
+    }
+    case "build-neovim-plugin": {
+      buildNeovimPlugin();
       break;
     }
     case "build-zed-extension": {
