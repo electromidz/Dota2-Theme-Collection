@@ -1,7 +1,7 @@
 {
-  "name": "dota-brewmaster",
-  "displayName": "Dota Brewmaster",
-  "description": "The Grandmaster — celestial pandaren warrior who commands the three elemental brews — A Dota 2 hero-inspired theme for VS Code",
+  "name": "dota-necrophos",
+  "displayName": "Dota Necrophos",
+  "description": "The Radiant Reaper — a sickly green death priest who drains life from the living — A Dota 2 hero-inspired theme for VS Code",
   "version": "0.1.0",
   "publisher": "dota-themes",
   "license": "MIT",
@@ -13,9 +13,9 @@
   ],
   "themes": [
     {
-      "label": "Dota Brewmaster",
+      "label": "Dota Necrophos",
       "uiTheme": "vs-dark",
-      "path": "./themes/dota-brewmaster-color-theme.json"
+      "path": "./themes/dota-necrophos-color-theme.json"
     }
   ]
 }

@@ -1,0 +1,7 @@
+id = "dota-themes"
+name = "Dota Themes"
+version = "0.1.0"
+schema_version = 1
+authors = ["dota-themes"]
+description = "Dark themes inspired by Dota 2 heroes — Necrophos, Invoker, Kunkka, Earth Spirit, Lich, Brewmaster"
+repository = "https://github.com/user/dota-themes"
