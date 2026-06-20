@@ -1,7 +1,7 @@
 {
-  "name": "dota-arc-warden",
-  "displayName": "Dota Arc Warden",
-  "description": "The Primordial — Flux unleashes unstable electric energy, Magnetic Field conjures a cyan barrier, Spark Wraith summons spectral spirits, Tempest Double duplicates cosmic power — A Dota 2 hero-inspired theme for VS Code",
+  "name": "dota-invoker",
+  "displayName": "Dota Invoker",
+  "description": "The Grand Magus — Quas conjures ice, Wex commands storm, Exort wields fire. Cold Snap freezes, Ghost Walk vanishes, Tornado lifts, E.M.P. detonates, Sun Strike burns from the sky, Chaos Meteor scorches the earth — A Dota 2 hero-inspired theme for VS Code",
   "version": "0.1.0",
   "publisher": "dota-themes",
   "license": "MIT",
@@ -13,9 +13,9 @@
   ],
   "themes": [
     {
-      "label": "Dota Arc Warden",
+      "label": "Dota Invoker",
       "uiTheme": "vs-dark",
-      "path": "./themes/dota-arc-warden-color-theme.json"
+      "path": "./themes/dota-invoker-color-theme.json"
     }
   ]
 }
