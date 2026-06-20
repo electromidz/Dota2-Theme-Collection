@@ -5,7 +5,7 @@ export const lich: HeroPalette = {
   metadata: {
     title: "Lich",
     description:
-      "The Frost Mage — Frost Blast explodes with ice, Frost Shield protects with frozen barriers, Sinister Gaze drains souls with dark magic, Sacrifice harvests mana from the living, Chain Frost bounces death between enemies",
+      "The Frost Mage — Frost Blast explodes with icy fire, Frost Shield protects with frozen barriers, Sinister Gaze drains souls with dark magic, Sacrifice harvests mana from the living, Chain Frost bounces death between enemies",
     author: "dota-themes",
   },
   colors: {
@@ -15,14 +15,14 @@ export const lich: HeroPalette = {
 
     // Core abilities as semantic roles
     primary: "#5ec4e8", // Frost Blast — ice blue explosion
-    secondary: "#7ad4f0", // Frost Shield — lighter protective ice
+    secondary: "#d44e5a", // Chain Frost impact — red damage on ice
     accent: "#6e5ec4", // Sinister Gaze — dark purple sorcery
 
     // Status
     error: "#d44e5a", // Chain Frost damage — blood on ice
-    warning: "#6e5ec4", // Sinister Gaze — dark purple warning
+    warning: "#d44e5a", // Sacrifice blood — dark ritual
     info: "#5ec4e8", // Frost Blast — ice info
-    success: "#5ec4e8", // Frost Shield — protective success
+    success: "#7ad4f0", // Frost Shield — protective success
   },
   editor: {
     background: "#060d14",
@@ -30,24 +30,24 @@ export const lich: HeroPalette = {
     gutter: "#0a131c", // Slightly lighter frozen wall
     lineHighlight: "#0c1722", // Subtle frost highlight
     selection: "#162a40", // Frozen selection
-    cursor: "#5ec4e8", // Frost Blast cursor
+    cursor: "#d44e5a", // Lich's red eyes — glowing in the dark
 
     // Syntax — each ability colors a token type
     comment: "#3e5868", // Frozen breath — cold, muted
-    keyword: "#6e5ec4", // Sinister Gaze — dark necromancy
+    keyword: "#d44e5a", // Chain Frost — red death keywords
     string: "#7ad4f0", // Frost Shield — icy protected strings
-    number: "#5ec4e8", // Frost Blast — cold blue numbers
-    function: "#8ab4d8", // Chain Frost — ice chain functions
+    number: "#d44e5a", // Frost Blast core — red-hot ice numbers
+    function: "#5ec4e8", // Frost Blast — ice blue functions
     variable: "#a8c4d8", // Frost mist — plain text
     type: "#6e5ec4", // Sinister Gaze — purple arcane types
-    constant: "#4a8ab4", // Deep ice — sturdy constants
+    constant: "#d44e5a", // Sacrifice — blood red constants
     operator: "#3e5868", // Frozen breath — subtle operators
     punctuation: "#3e5868", // Frozen breath — subtle punctuation
     tag: "#5ec4e8", // Frost Blast — icy tags
     attribute: "#6e5ec4", // Sinister Gaze — purple attrs
     class: "#6e5ec4", // Sinister Gaze — arcane classes
     interface: "#6e5ec4", // Sinister Gaze — dark types
-    enum: "#4a8ab4", // Deep ice — bronze enums
+    enum: "#d44e5a", // Sacrifice — blood red enums
     parameter: "#88b4cc", // Mid frost — params
     property: "#6aa0c0", // Mid blue — properties
     registry: "#5ec4e8", // Frost Blast — active registry
@@ -59,14 +59,14 @@ export const lich: HeroPalette = {
   terminal: {
     background: "#060d14",
     foreground: "#a8c4d8",
-    cursor: "#5ec4e8",
+    cursor: "#d44e5a", // Lich's red eyes
     selectionBackground: "#162a40",
 
-    // ANSI — the frost court colors the terminal
+    // ANSI — frost and blood
     black: "#0a131c", // Frozen shadow
     red: "#d44e5a", // Chain Frost damage
     green: "#5ec4e8", // Frost Blast
-    yellow: "#6e5ec4", // Sinister Gaze purple
+    yellow: "#d44e5a", // Sacrifice blood
     blue: "#5ec4e8", // Frost ice blue
     magenta: "#6e5ec4", // Sinister Gaze
     cyan: "#7ad4f0", // Frost Shield
@@ -74,9 +74,9 @@ export const lich: HeroPalette = {
 
     // Bright — Chain Frost bouncing brighter
     brightBlack: "#3e5868", // Frozen breath
-    brightRed: "#e46a76", // Bright blood
+    brightRed: "#e86a76", // Bright blood — Chain Frost bouncing
     brightGreen: "#80d8f8", // Bright frost
-    brightYellow: "#8a7ad4", // Bright sinister
+    brightYellow: "#e86a76", // Bright blood sacrifice
     brightBlue: "#80d8f8", // Bright chain frost
     brightMagenta: "#8a7ad4", // Bright purple
     brightCyan: "#a0e4f8", // Bright shield
