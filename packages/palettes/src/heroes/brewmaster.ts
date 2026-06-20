@@ -5,71 +5,82 @@ export const brewmaster: HeroPalette = {
   metadata: {
     title: "Brewmaster",
     description:
-      "The Grandmaster — celestial pandaren warrior who commands the three elemental brews",
+      "The Grandmaster — Thunder Clap shakes the earth, Cinder Brew ignites foes, Drunken Brawler sways like wind, Primal Split summons Earth, Storm, and Fire",
     author: "dota-themes",
   },
   colors: {
-    background: "#1a1008",
-    foreground: "#e0c8a0",
-    primary: "#ff8f00",
-    secondary: "#ffb74d",
-    accent: "#ffd54f",
-    error: "#ef5350",
-    warning: "#ffab40",
-    info: "#4fc3f7",
-    success: "#81c784",
+    // Base - a dark tavern where the brew ages
+    background: "#15100c", // Aged oak barrel — dark, warm, woody
+    foreground: "#d4bfa0", // Parchment scroll — warm, readable
+
+    // Core abilities as semantic roles
+    primary: "#d4782a", // Thunder Clap — orange shockwave impact
+    secondary: "#c45c3a", // Cinder Brew — burning ember red
+    accent: "#e6b84a", // Drunken Brawler — golden brew, luck
+
+    // Status
+    error: "#c45c3a", // Fire Brawler — blazing critical
+    warning: "#e6b84a", // Cinder Brew ignite — golden warning
+    info: "#5a9ec4", // Storm Brawler — swift blue wind
+    success: "#7a9e5a", // Earth Brawler — stone green armor
   },
   editor: {
-    background: "#1a1008",
-    foreground: "#e0c8a0",
-    gutter: "#201408",
-    lineHighlight: "#281a0c",
-    selection: "#e65100",
-    cursor: "#ffd54f",
-    comment: "#8a7a5a",
-    keyword: "#ffb74d",
-    string: "#ffe0b2",
-    number: "#ffd54f",
-    function: "#ff8f00",
-    variable: "#e0c8a0",
-    type: "#ffb74d",
-    constant: "#ffd54f",
-    operator: "#ffb74d",
-    punctuation: "#8a7a5a",
-    tag: "#ff8f00",
-    attribute: "#ffb74d",
-    class: "#ffd54f",
-    interface: "#ffb74d",
-    enum: "#ffe0b2",
-    parameter: "#e0c8a0",
-    property: "#ffb74d",
-    registry: "#ffd54f",
-    builtin: "#ffb74d",
-    text: "#e0c8a0",
-    whitespace: "#2a2010",
-    indentation: "#2a2010",
+    background: "#15100c",
+    foreground: "#d4bfa0",
+    gutter: "#1a140e", // Slightly lighter barrel
+    lineHighlight: "#1e1812", // Warm highlight
+    selection: "#3a2818", // Amber selection
+    cursor: "#e6b84a", // Drunken Brawler gold
+
+    // Syntax — each ability colors a token type
+    comment: "#7a6e58", // Barrel stave grey — aged, muted
+    keyword: "#c45c3a", // Cinder Brew — fiery statements
+    string: "#e6b84a", // Drunken Brawler gold — lucky strings
+    number: "#d4782a", // Thunder Clap orange — bold numbers
+    function: "#d4782a", // Thunder Clap — impactful functions
+    variable: "#d4bfa0", // Parchment — plain text
+    type: "#5a9ec4", // Storm Brawler — swift types
+    constant: "#8a6e4a", // Earth Brawler bronze — sturdy constants
+    operator: "#7a6e58", // Barrel stave — subtle operators
+    punctuation: "#7a6e58", // Barrel stave — subtle punctuation
+    tag: "#c45c3a", // Cinder Brew — fiery tags
+    attribute: "#5a9ec4", // Storm Brawler — wind attrs
+    class: "#5a9ec4", // Storm Brawler — swift classes
+    interface: "#5a9ec4", // Storm Brawler — blue types
+    enum: "#8a6e4a", // Earth Brawler — bronze enums
+    parameter: "#b8a888", // Warm parchment — params
+    property: "#9a8a6a", // Mid brown — properties
+    registry: "#d4782a", // Thunder Clap — active registry
+    builtin: "#e6b84a", // Drunken Brawler — golden builtins
+    text: "#d4bfa0",
+    whitespace: "#221a12", // Faint wood grain
+    indentation: "#3a2818", // Amber indent guides
   },
   terminal: {
-    background: "#1a1008",
-    foreground: "#e0c8a0",
-    cursor: "#ffd54f",
-    selectionBackground: "#e65100",
-    black: "#1a1008",
-    red: "#ef5350",
-    green: "#81c784",
-    yellow: "#ffab40",
-    blue: "#4fc3f7",
-    magenta: "#ffb74d",
-    cyan: "#ffd54f",
-    white: "#e0c8a0",
-    brightBlack: "#8a7a5a",
-    brightRed: "#ef5350",
-    brightGreen: "#81c784",
-    brightYellow: "#ffd54f",
-    brightBlue: "#4fc3f7",
-    brightMagenta: "#ffe0b2",
-    brightCyan: "#ffd54f",
-    brightWhite: "#fff8e1",
+    background: "#15100c",
+    foreground: "#d4bfa0",
+    cursor: "#e6b84a",
+    selectionBackground: "#3a2818",
+
+    // ANSI — the three elements color the terminal
+    black: "#1a140e", // Barrel shadow
+    red: "#c45c3a", // Fire Brawler
+    green: "#7a9e5a", // Earth Brawler
+    yellow: "#e6b84a", // Drunken Brawler gold
+    blue: "#5a9ec4", // Storm Brawler
+    magenta: "#b86e3a", // Cinder Brew amber
+    cyan: "#6aaa8a", // Jade brew
+    white: "#d4bfa0", // Parchment
+
+    // Bright — Primal Split amplifies each element
+    brightBlack: "#7a6e58", // Barrel stave
+    brightRed: "#d46a4a", // Bright fire
+    brightGreen: "#8ab06a", // Bright earth
+    brightYellow: "#f0c860", // Bright brew
+    brightBlue: "#70b4d8", // Bright storm
+    brightMagenta: "#c88a5a", // Bright ember
+    brightCyan: "#80c4a0", // Bright jade
+    brightWhite: "#e8dcc0", // Bright parchment
   },
 };
 

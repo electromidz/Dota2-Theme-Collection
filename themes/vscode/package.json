@@ -1,7 +1,7 @@
 {
-  "name": "dota-necrophos",
-  "displayName": "Dota Necrophos",
-  "description": "The Radiant Reaper — a sickly green death priest who drains life from the living — A Dota 2 hero-inspired theme for VS Code",
+  "name": "dota-lich",
+  "displayName": "Dota Lich",
+  "description": "The Frost Mage — Frost Blast explodes with ice, Frost Shield protects with frozen barriers, Sinister Gaze drains souls with dark magic, Sacrifice harvests mana from the living, Chain Frost bounces death between enemies — A Dota 2 hero-inspired theme for VS Code",
   "version": "0.1.0",
   "publisher": "dota-themes",
   "license": "MIT",
@@ -13,9 +13,9 @@
   ],
   "themes": [
     {
-      "label": "Dota Necrophos",
+      "label": "Dota Lich",
       "uiTheme": "vs-dark",
-      "path": "./themes/dota-necrophos-color-theme.json"
+      "path": "./themes/dota-lich-color-theme.json"
     }
   ]
 }

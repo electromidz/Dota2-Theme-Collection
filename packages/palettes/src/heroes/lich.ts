@@ -4,71 +4,83 @@ export const lich: HeroPalette = {
   hero: "lich",
   metadata: {
     title: "Lich",
-    description: "The Frost Mage — ancient frost sorcerer, lord of the frozen wastes",
+    description:
+      "The Frost Mage — Frost Blast explodes with ice, Frost Shield protects with frozen barriers, Sinister Gaze drains souls with dark magic, Sacrifice harvests mana from the living, Chain Frost bounces death between enemies",
     author: "dota-themes",
   },
   colors: {
-    background: "#0a1218",
-    foreground: "#b8d4e3",
-    primary: "#4fc3f7",
-    secondary: "#81d4fa",
-    accent: "#29b6f6",
-    error: "#ef5350",
-    warning: "#ffb74d",
-    info: "#4dd0e1",
-    success: "#81c784",
+    // Base - the frozen abyss where Lich reigns
+    background: "#060d14", // Frozen void — deep, cold, empty
+    foreground: "#a8c4d8", // Frost mist — pale, cold, ethereal
+
+    // Core abilities as semantic roles
+    primary: "#5ec4e8", // Frost Blast — ice blue explosion
+    secondary: "#7ad4f0", // Frost Shield — lighter protective ice
+    accent: "#6e5ec4", // Sinister Gaze — dark purple sorcery
+
+    // Status
+    error: "#d44e5a", // Chain Frost damage — blood on ice
+    warning: "#6e5ec4", // Sinister Gaze — dark purple warning
+    info: "#5ec4e8", // Frost Blast — ice info
+    success: "#5ec4e8", // Frost Shield — protective success
   },
   editor: {
-    background: "#0a1218",
-    foreground: "#b8d4e3",
-    gutter: "#0d1820",
-    lineHighlight: "#101e28",
-    selection: "#0d47a1",
-    cursor: "#29b6f6",
-    comment: "#4a6a7a",
-    keyword: "#81d4fa",
-    string: "#b3e5fc",
-    number: "#29b6f6",
-    function: "#4fc3f7",
-    variable: "#b8d4e3",
-    type: "#81d4fa",
-    constant: "#29b6f6",
-    operator: "#81d4fa",
-    punctuation: "#4a6a7a",
-    tag: "#4fc3f7",
-    attribute: "#81d4fa",
-    class: "#29b6f6",
-    interface: "#81d4fa",
-    enum: "#b3e5fc",
-    parameter: "#b8d4e3",
-    property: "#81d4fa",
-    registry: "#29b6f6",
-    builtin: "#81d4fa",
-    text: "#b8d4e3",
-    whitespace: "#1a2a35",
-    indentation: "#1a2a35",
+    background: "#060d14",
+    foreground: "#a8c4d8",
+    gutter: "#0a131c", // Slightly lighter frozen wall
+    lineHighlight: "#0c1722", // Subtle frost highlight
+    selection: "#162a40", // Frozen selection
+    cursor: "#5ec4e8", // Frost Blast cursor
+
+    // Syntax — each ability colors a token type
+    comment: "#3e5868", // Frozen breath — cold, muted
+    keyword: "#6e5ec4", // Sinister Gaze — dark necromancy
+    string: "#7ad4f0", // Frost Shield — icy protected strings
+    number: "#5ec4e8", // Frost Blast — cold blue numbers
+    function: "#8ab4d8", // Chain Frost — ice chain functions
+    variable: "#a8c4d8", // Frost mist — plain text
+    type: "#6e5ec4", // Sinister Gaze — purple arcane types
+    constant: "#4a8ab4", // Deep ice — sturdy constants
+    operator: "#3e5868", // Frozen breath — subtle operators
+    punctuation: "#3e5868", // Frozen breath — subtle punctuation
+    tag: "#5ec4e8", // Frost Blast — icy tags
+    attribute: "#6e5ec4", // Sinister Gaze — purple attrs
+    class: "#6e5ec4", // Sinister Gaze — arcane classes
+    interface: "#6e5ec4", // Sinister Gaze — dark types
+    enum: "#4a8ab4", // Deep ice — bronze enums
+    parameter: "#88b4cc", // Mid frost — params
+    property: "#6aa0c0", // Mid blue — properties
+    registry: "#5ec4e8", // Frost Blast — active registry
+    builtin: "#7ad4f0", // Frost Shield — bright builtins
+    text: "#a8c4d8",
+    whitespace: "#101c28", // Faint frost lines
+    indentation: "#162a40", // Frozen indent guides
   },
   terminal: {
-    background: "#0a1218",
-    foreground: "#b8d4e3",
-    cursor: "#29b6f6",
-    selectionBackground: "#0d47a1",
-    black: "#0a1218",
-    red: "#ef5350",
-    green: "#81c784",
-    yellow: "#ffb74d",
-    blue: "#4fc3f7",
-    magenta: "#81d4fa",
-    cyan: "#4dd0e1",
-    white: "#b8d4e3",
-    brightBlack: "#4a6a7a",
-    brightRed: "#ef5350",
-    brightGreen: "#81c784",
-    brightYellow: "#ffb74d",
-    brightBlue: "#4fc3f7",
-    brightMagenta: "#b3e5fc",
-    brightCyan: "#29b6f6",
-    brightWhite: "#e1f5fe",
+    background: "#060d14",
+    foreground: "#a8c4d8",
+    cursor: "#5ec4e8",
+    selectionBackground: "#162a40",
+
+    // ANSI — the frost court colors the terminal
+    black: "#0a131c", // Frozen shadow
+    red: "#d44e5a", // Chain Frost damage
+    green: "#5ec4e8", // Frost Blast
+    yellow: "#6e5ec4", // Sinister Gaze purple
+    blue: "#5ec4e8", // Frost ice blue
+    magenta: "#6e5ec4", // Sinister Gaze
+    cyan: "#7ad4f0", // Frost Shield
+    white: "#a8c4d8", // Frost mist
+
+    // Bright — Chain Frost bouncing brighter
+    brightBlack: "#3e5868", // Frozen breath
+    brightRed: "#e46a76", // Bright blood
+    brightGreen: "#80d8f8", // Bright frost
+    brightYellow: "#8a7ad4", // Bright sinister
+    brightBlue: "#80d8f8", // Bright chain frost
+    brightMagenta: "#8a7ad4", // Bright purple
+    brightCyan: "#a0e4f8", // Bright shield
+    brightWhite: "#c8e0f0", // Bright mist
   },
 };
 
